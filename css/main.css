@@ -1,0 +1,30 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
+	overflow: hidden;
+}
+
+.seccion {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+section div.item {
+	display: inline-block;
+	width: 23%;
+	height: 100%;
+	border: 3px solid red;
+}
+
+.imagen-card {
+	display: block;
+	width: 80%;
+	margin: auto;
+}
+
+span {
+	color: #FFFFFF;
+}
+

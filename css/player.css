@@ -1,0 +1,15 @@
+
+.vjs-control-bar {
+	background-color: rgba(255, 255, 255, 0) !important;
+}
+
+
+.vjs-volume-panel,
+.vjs-picture-in-picture-control,
+.vjs-fullscreen-control {
+	display: none !important;
+}
+
+.vjs-play-progress{
+	
+}

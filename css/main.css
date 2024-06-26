@@ -1,9 +1,12 @@
 
 body {
-	margin: 0;
-	padding: 0;
 	background-color: #000000;
-	overflow: hidden;
+	overflow-x: scroll;
+}
+
+#menus {
+	height: 100vh;
+	overflow-y: hidden;
 }
 
 .seccion {
@@ -19,7 +22,7 @@ section div.item {
 
 .imagen-card {
 	display: block;
-	width: 80%;
+	width: 90%;
 	margin: auto;
 }
 

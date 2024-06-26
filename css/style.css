@@ -1,3 +1,12 @@
+.menus {
+	left: 0;
+	top: 0;
+	position: absolute;
+	overflow-y: hidden;
+	
+	max-height: 100vh;
+}
+
 .button.active {
 	transform: scale(1.15);
 }
@@ -16,7 +25,7 @@
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
+	transition: all .8s ease-out;
 	
 }
 
@@ -33,5 +42,15 @@
 
 #p1.animate {
 	transform: translateX(-200%);
-	transition-delay: .4s !important;
+	transition-delay: all .8s ease-out;
+}
+
+#p2 {
+	left: 300%;
+	background-color: #bc06cc;
+}
+
+#p2.animate {
+	transform: translateX(-300%);
+	transition-delay: all .8s ease-out;
 }

@@ -196,7 +196,7 @@ App.Navigation = (function Navigation() {
         var currentItem = menu.getItems()[currentIndex];
         var currentElementId = currentItem.id;
         
-        if(currentItem.nodeName === "A") {
+        if(currentItem.nodeName === "A" && menu.name != "episodios") {
         	var episodios = await traerEpisodios(currentElementId);
         	var element = document.getElementById('episodios');
         	element.innerHTML="";
@@ -216,6 +216,17 @@ App.Navigation = (function Navigation() {
             
             changeActiveMenu('episodios', 0);
         }
+        else {
+        	var playerHTML = "<video menuAnt=" + menu.name + " id='my-player' width='352' height='198' controls>"
+			    + "<source src=" + currentElementId + " type='application/x-mpegURL'></video>";
+        	
+        	document.getElementById('player-page').innerHTML = playerHTML;
+        	
+        	element = document.getElementById('p2');
+            element.classList.remove('animate');
+            element.classList.add('animate');
+        	
+        }
     }
     
     function generateEpMenu(menu) {
@@ -232,6 +243,9 @@ App.Navigation = (function Navigation() {
             element.classList.remove('animate');
             
             changeActiveMenu(menu.previousMenu, 0);
+		}
+    	else if (menu.name === "episodios") {
+    		
 		}
     }
 
@@ -260,7 +274,7 @@ App.Navigation = (function Navigation() {
                 );
         }
         toggleFocusOnActiveItem();
-        activeMenu.getItems()[activeMenu.getFocusedElemIdx()].scrollIntoView({behavior: 'smooth', block: 'center'});
+        //activeMenu.getItems()[activeMenu.getFocusedElemIdx()].scrollIntoView({behavior: 'smooth'});
     }
 
     /**

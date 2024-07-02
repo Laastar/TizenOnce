@@ -1,4 +1,4 @@
-App = window.App || {};
+/*var App = window.App || {};
 App.Navigation = (function Navigation() {
     var activeMenu = null;
     var Menus = {};
@@ -34,6 +34,7 @@ App.Navigation = (function Navigation() {
             case 13: // enter
                 activeMenu.onKeyEnter();
                 break;
+            case 8:
             case 10009: // return
                 activeMenu.onKeyReturn();
                 break;
@@ -195,6 +196,7 @@ App.Navigation = (function Navigation() {
         var currentIndex = menu.getFocusedElemIdx();
         var currentItem = menu.getItems()[currentIndex];
         var currentElementId = currentItem.id;
+        var pagina = "";
         
         if(currentItem.nodeName === "A" && menu.name != "episodios") {
         	var episodios = await traerEpisodios(currentElementId);
@@ -208,9 +210,9 @@ App.Navigation = (function Navigation() {
             
             document.getElementById('episodios').innerHTML = epHTML;
 
-            element = document.getElementById('p1');
-            element.classList.remove('animate');
-            element.classList.add('animate');
+            pagina = document.getElementById('p1');
+            pagina.classList.remove('animate');
+            pagina.classList.add('animate');
             
             generateEpMenu(menu.name);
             
@@ -222,9 +224,9 @@ App.Navigation = (function Navigation() {
         	
         	document.getElementById('player-page').innerHTML = playerHTML;
         	
-        	element = document.getElementById('p2');
-            element.classList.remove('animate');
-            element.classList.add('animate');
+        	pagina = document.getElementById('p2');
+        	pagina.classList.remove('animate');
+        	pagina.classList.add('animate');
         	
         }
     }
@@ -264,7 +266,7 @@ App.Navigation = (function Navigation() {
     /**
      *
      * @param {String} name - name of the menu that will be active
-     */
+     */ /*
     function changeActiveMenu(name, index) {
         toggleFocusOnActiveItem();
         activeMenu = Menus[name] || activeMenu;
@@ -274,7 +276,6 @@ App.Navigation = (function Navigation() {
                 );
         }
         toggleFocusOnActiveItem();
-        //activeMenu.getItems()[activeMenu.getFocusedElemIdx()].scrollIntoView({behavior: 'smooth'});
     }
 
     /**
@@ -292,7 +293,7 @@ App.Navigation = (function Navigation() {
      * @param {String} [config.syncWith] - name of menu to synchronize focused index with
      * @param {Function} [config.onNextMenu] - called when navigating to next menu
      * @param {Function} [config.onPreviousMenu] - called when navigating to previous menu
-     */
+     */ /*
     function registerMenu(config) {
         var domEl = config.domEl;
         var focusedElemIdx = 0;
@@ -396,7 +397,7 @@ App.Navigation = (function Navigation() {
     /**
      * Unregisters menu from map
      * @param {String} name - name of menu to be unregistered
-     */
+     */ /*
     function unregisterMenu(name) {
         var menu = Menus[name];
 
@@ -446,4 +447,4 @@ App.Navigation = (function Navigation() {
         enable: enable,
         getActiveMenu: getActiveMenu
     };
-}());
+}()); */
